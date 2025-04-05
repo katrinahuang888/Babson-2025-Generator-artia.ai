@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="content-container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center">
-            <h2 className="text-2xl font-bold gradient-text text-[#313e7f] font-tinos">Artisanal</h2>
+            <h2 className="text-2xl font-bold gradient-text text-[#313e7f] font-tinos">artia</h2>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             <Link to="/how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-[#313e7f] font-tinos">
@@ -18,6 +18,9 @@ const Navbar = () => {
             <Link to="/explore" className="text-muted-foreground hover:text-foreground transition-colors text-[#313e7f] font-tinos">
               Explore Artisans
             </Link>
+            <Link to="/join-artia">
+            <Button className="hidden sm:inline-flex bg-[#313e7f] hover:bg-[#2b366f] text-white font-tinos">Join Artia</Button>
+          </Link>
           </nav>
         </div>
         

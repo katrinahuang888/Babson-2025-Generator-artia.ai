@@ -130,19 +130,19 @@ const AuthForm = ({ type }: AuthFormProps) => {
       </CardContent>
       <CardFooter className="flex justify-center border-t p-6">
         {type === 'login' ? (
-          <p className="text-sm text-muted-foreground">
-            Don't have an account?{' '}
-            <a 
-              href="/register" 
-              className="text-marketplace-purple hover:underline"
-              onClick={(e) => {
-                e.preventDefault();
-                navigate('/register');
-              }}
-            >
-              Sign up
-            </a>
-          </p>
+          <p className="text-sm" style={{ color: '#313e7f' }}>
+          Don't have an account?{' '}
+          <a 
+            href="/register" 
+            className="text-marketplace-purple hover:underline"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate('/register');
+            }}
+          >
+            Sign up
+          </a>
+        </p>        
         ) : (
           <p className="text-sm text-muted-foreground">
             Already have an account?{' '}

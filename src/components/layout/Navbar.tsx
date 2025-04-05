@@ -10,13 +10,13 @@ const Navbar = () => {
       <div className="content-container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center">
-            <h2 className="text-2xl font-bold gradient-text">ArtIsanal</h2>
+            <h2 className="text-2xl font-bold gradient-text text-[#313e7f]">ArtIsanal</h2>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
-            <Link to="/how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-[#313e7f]">
               How It Works
             </Link>
-            <Link to="/explore" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/explore" className="text-muted-foreground hover:text-foreground transition-colors text-[#313e7f]">
               Explore Artisans
             </Link>
           </nav>
@@ -27,7 +27,7 @@ const Navbar = () => {
             <Button variant="outline" className="hidden sm:inline-flex">Login</Button>
           </Link>
           <Link to="/register">
-            <Button className="hidden sm:inline-flex bg-marketplace-terracotta hover:bg-marketplace-terracotta-dark">Get Started</Button>
+            <Button className="hidden sm:inline-flex bg-[#313e7f] hover:bg-[#2b366f] text-white">Get Started</Button>
           </Link>
           <Link to="/login" className="sm:hidden">
             <UserCircle className="h-6 w-6 text-marketplace-terracotta" />

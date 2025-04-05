@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="content-container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-bold gradient-text">ArtIsanal</h3>
+            <h3 className="text-lg font-bold gradient-text text-[#313e7f]">ArtIsanal</h3>
             <p className="text-sm text-muted-foreground">
               The marketplace connecting customers with skilled artisans creating handcrafted treasures.
             </p>

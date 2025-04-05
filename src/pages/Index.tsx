@@ -18,13 +18,13 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 text-center md:text-left animate-fade-in">
                 <h1 className="font-bold !leading-tight">
-                  Discover Authentic <span className="gradient-text">Artisan</span> Crafts Filled With Heritage
+                  Discover Authentic <span className="gradient-text text-[#313e7f]">Artisan</span> Crafts Filled With Heritage
                 </h1>
                 <p className="text-xl text-muted-foreground">
                   An AI-powered marketplace bridging global designers, architects, and creators with artisan communities worldwide. Combining smart tech, visual tools, and cultural heritage — making custom, story-rich design accessible, efficient, and ethical.                </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Link to="/register">
-                    <Button size="lg" className="w-full sm:w-auto">
+                    <Button size="lg" className="w-full sm:w-auto bg-[#313e7f] hover:bg-[#2b366f] text-white">
                       <span>Get Started</span>
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>

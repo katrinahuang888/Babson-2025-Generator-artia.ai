@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="content-container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-bold gradient-text">CreatorMarket</h3>
+            <h3 className="text-lg font-bold gradient-text">ArtisanMarket</h3>
             <p className="text-sm text-muted-foreground">
-              The marketplace connecting creative vision with skilled creators.
+              The marketplace connecting customers with skilled artisans creating handcrafted treasures.
             </p>
           </div>
           
@@ -24,33 +24,33 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/create-request" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Create a Request
+                  Commission an Artisan
                 </Link>
               </li>
               <li>
                 <Link to="/explore" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Browse Creators
+                  Browse Artisans
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-sm font-semibold mb-4">For Sellers</h4>
+            <h4 className="text-sm font-semibold mb-4">For Artisans</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/become-creator" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Become a Creator
+                  Become an Artisan
                 </Link>
               </li>
               <li>
                 <Link to="/creator-guidelines" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Creator Guidelines
+                  Artisan Guidelines
                 </Link>
               </li>
               <li>
                 <Link to="/seller-dashboard" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Seller Dashboard
+                  Artisan Dashboard
                 </Link>
               </li>
             </ul>
@@ -79,7 +79,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-6 border-t text-center text-sm text-muted-foreground">
-          <p>© 2025 CreatorMarket. All rights reserved.</p>
+          <p>© 2025 ArtisanMarket. All rights reserved.</p>
         </div>
       </div>
     </footer>

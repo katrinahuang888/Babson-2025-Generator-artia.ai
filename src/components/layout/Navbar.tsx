@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { UserCircle } from "lucide-react";
+import { UserCircle, Palette } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -10,14 +10,14 @@ const Navbar = () => {
       <div className="content-container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center">
-            <h2 className="text-2xl font-bold gradient-text">CreatorMarket</h2>
+            <h2 className="text-2xl font-bold gradient-text">ArtisanMarket</h2>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             <Link to="/how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">
               How It Works
             </Link>
             <Link to="/explore" className="text-muted-foreground hover:text-foreground transition-colors">
-              Explore Creators
+              Explore Artisans
             </Link>
           </nav>
         </div>

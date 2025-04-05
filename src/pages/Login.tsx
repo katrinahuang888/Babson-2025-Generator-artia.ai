@@ -15,7 +15,7 @@ const Login = () => {
           <div className="mb-8 text-center">
             <h1 className="text-3xl font-bold">Welcome Back</h1>
             <p className="text-muted-foreground mt-2">
-              Log in to your CreatorMarket account
+              Log in to your ArtisanMarket account
             </p>
           </div>
           

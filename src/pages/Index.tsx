@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { ArrowRight, Shield, Image, MessageCircle, Star } from "lucide-react";
+import { ArrowRight, Shield, Palette, MessageCircle, Star, HandMetal, PaintBucket, Scissors } from "lucide-react";
 
 const Index = () => {
   return (
@@ -18,11 +18,10 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 text-center md:text-left animate-fade-in">
                 <h1 className="font-bold !leading-tight">
-                  Bring Your Creative <span className="gradient-text">Vision</span> to Life
+                  Discover Authentic <span className="gradient-text">Artisan</span> Crafts
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Commission unique creations or sell your creative skills on our marketplace connecting 
-                  vision with talent.
+                  Commission handcrafted treasures directly from skilled artisans or sell your artisanal creations on our marketplace.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Link to="/register">
@@ -33,7 +32,7 @@ const Index = () => {
                   </Link>
                   <Link to="/explore">
                     <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                      Explore Creators
+                      Explore Artisans
                     </Button>
                   </Link>
                 </div>
@@ -43,18 +42,18 @@ const Index = () => {
                 <div className="aspect-[4/3] bg-marketplace-purple/20">
                   {/* In production, this would be a real image */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-lg text-marketplace-purple">Marketplace Hero Image</p>
+                    <p className="text-lg text-marketplace-purple">Handcrafted Pottery Collection</p>
                   </div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
                   <div className="flex items-center gap-2">
                     <img 
-                      src="https://source.unsplash.com/random/100x100/?portrait" 
-                      alt="Creator Avatar"
+                      src="https://source.unsplash.com/random/100x100/?potter" 
+                      alt="Artisan Avatar"
                       className="w-10 h-10 rounded-full border-2 border-white"
                     />
                     <div className="text-white">
-                      <p className="font-medium">Original Design by @creator</p>
+                      <p className="font-medium">Handmade Clay Pottery by @artisan</p>
                       <div className="flex items-center text-xs">
                         <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                         <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
@@ -77,8 +76,8 @@ const Index = () => {
             <div className="text-center mb-12">
               <h2 className="mb-4">How It Works</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Our marketplace makes it easy to bring your creative ideas to life,
-                whether you're looking to buy or sell creative services.
+                Our marketplace makes it easy to commission bespoke handcrafted items,
+                whether you're looking to buy unique artisan goods or sell your handmade creations.
               </p>
             </div>
             
@@ -87,23 +86,23 @@ const Index = () => {
                 <div className="step"></div>
                 <h3 className="text-xl font-medium mb-2">Share Your Vision</h3>
                 <p className="text-muted-foreground">
-                  Upload reference images or describe your idea to help creators understand what you're looking for.
+                  Upload reference images or describe the handcrafted item you're looking for to help artisans understand your needs.
                 </p>
               </div>
               
               <div className="bg-background p-6 rounded-lg shadow-sm relative pl-8">
                 <div className="step"></div>
-                <h3 className="text-xl font-medium mb-2">Connect with Creators</h3>
+                <h3 className="text-xl font-medium mb-2">Connect with Artisans</h3>
                 <p className="text-muted-foreground">
-                  Browse our marketplace of skilled creators and find the perfect match for your project.
+                  Browse our marketplace of skilled craftspeople and find the perfect artisan for your custom piece.
                 </p>
               </div>
               
               <div className="bg-background p-6 rounded-lg shadow-sm relative pl-8">
                 <div className="step"></div>
-                <h3 className="text-xl font-medium mb-2">Receive Your Creation</h3>
+                <h3 className="text-xl font-medium mb-2">Receive Your Handcrafted Item</h3>
                 <p className="text-muted-foreground">
-                  Work with your chosen creator to refine the project until you're completely satisfied.
+                  Work with your chosen artisan as they create a one-of-a-kind piece made especially for you.
                 </p>
               </div>
             </div>
@@ -120,9 +119,9 @@ const Index = () => {
         <section className="py-16 bg-secondary">
           <div className="content-container">
             <div className="text-center mb-12">
-              <h2 className="mb-4">Why Choose CreatorMarket</h2>
+              <h2 className="mb-4">Why Choose ArtisanMarket</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Our platform offers a secure, intuitive experience for both buyers and creators.
+                Our platform offers a secure, intuitive experience for both buyers and artisan creators.
               </p>
             </div>
             
@@ -131,19 +130,19 @@ const Index = () => {
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
                   <Shield className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-medium mb-2">Secure Transactions</h3>
+                <h3 className="text-xl font-medium mb-2">Authentic Craftsmanship</h3>
                 <p className="text-muted-foreground">
-                  Our secure payment system ensures your money is protected until you're satisfied with the work.
+                  Every item is handcrafted by verified artisans who take pride in their traditional skills and techniques.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm text-center">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
-                  <Image className="h-6 w-6 text-primary" />
+                  <HandMetal className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-medium mb-2">Visual References</h3>
+                <h3 className="text-xl font-medium mb-2">Bespoke Creation</h3>
                 <p className="text-muted-foreground">
-                  Share inspirational images to help creators understand exactly what you're looking for.
+                  Commission custom pieces tailored to your exact specifications and preferences.
                 </p>
               </div>
               
@@ -153,7 +152,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-medium mb-2">Direct Communication</h3>
                 <p className="text-muted-foreground">
-                  Built-in chat features allow for clear communication between buyers and creators.
+                  Built-in chat features allow for clear communication between buyers and artisans throughout the creation process.
                 </p>
               </div>
             </div>
@@ -165,8 +164,8 @@ const Index = () => {
           <div className="content-container text-center">
             <h2 className="mb-4">Ready to Get Started?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-              Join our creative marketplace today and turn your vision into reality
-              or offer your creative skills to clients around the world.
+              Join our artisan marketplace today and commission unique handcrafted items
+              or offer your artisanal skills to clients around the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/register?type=buyer">
@@ -176,7 +175,7 @@ const Index = () => {
               </Link>
               <Link to="/register?type=seller">
                 <Button size="lg" variant="outline" className="bg-transparent border-white hover:bg-white/10 w-full sm:w-auto">
-                  Join as a Creator
+                  Join as an Artisan
                 </Button>
               </Link>
             </div>

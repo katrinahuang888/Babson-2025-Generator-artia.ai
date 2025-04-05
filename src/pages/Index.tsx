@@ -118,7 +118,7 @@ const Index = () => {
         <section className="py-16 bg-secondary">
           <div className="content-container">
             <div className="text-center mb-12">
-              <h2 className="mb-4">Why Choose aRTiSANAL</h2>
+              <h2 className="mb-4">Why Choose ArtIsanal</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Our platform offers a secure, intuitive experience for both buyers and artisan creators.
               </p>

@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="content-container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center">
-            <h2 className="text-2xl font-bold gradient-text">aRTiSANAL</h2>
+            <h2 className="text-2xl font-bold gradient-text">ArtIsanal</h2>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             <Link to="/how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">

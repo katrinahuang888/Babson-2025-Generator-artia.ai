@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="content-container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-bold gradient-text text-[#313e7f] font-tinos">artia</h3>
+            <h3 className="text-lg font-bold gradient-text text-[#313e7f] font-tinos">Artisanal</h3>
             <p className="text-sm text-muted-foreground font-tinos">
               The marketplace connecting customers with skilled artisans creating handcrafted treasures.
             </p>
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-6 border-t text-center text-sm text-muted-foreground font-tinos">
-          <p>© 2025 artia. All rights reserved.</p>
+          <p>© 2025 Artisanal. All rights reserved.</p>
         </div>
       </div>
     </footer>

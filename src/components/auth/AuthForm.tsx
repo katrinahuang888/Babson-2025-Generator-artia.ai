@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -46,7 +47,7 @@ const AuthForm = ({ type }: AuthFormProps) => {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto font-tinos" style={{ color: '#313e7f' }}>
+    <Card className="w-full max-w-md mx-auto">
       <CardHeader>
         <CardTitle>{type === 'login' ? 'Login' : 'Create an Account'}</CardTitle>
         <CardDescription>
@@ -130,25 +131,25 @@ const AuthForm = ({ type }: AuthFormProps) => {
       </CardContent>
       <CardFooter className="flex justify-center border-t p-6">
         {type === 'login' ? (
-          <p className="text-sm" style={{ color: '#313e7f' }}>
-          Don't have an account?{' '}
-          <a 
-            href="/register" 
-            className="font-tinos text-black text-marketplace-purple hover:underline"
-            onClick={(e) => {
-              e.preventDefault();
-              navigate('/register');
-            }}
-          >
-            Sign up
-          </a>
-        </p>        
+          <p className="text-sm text-muted-foreground">
+            Don't have an account?{' '}
+            <a 
+              href="/register" 
+              className="text-marketplace-purple hover:underline"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/register');
+              }}
+            >
+              Sign up
+            </a>
+          </p>
         ) : (
-          <p className="font-tinos text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             Already have an account?{' '}
             <a 
               href="/login" 
-              className="font-tinos text-black text-marketplace-purple hover:underline"
+              className="text-marketplace-purple hover:underline"
               onClick={(e) => {
                 e.preventDefault();
                 navigate('/login');

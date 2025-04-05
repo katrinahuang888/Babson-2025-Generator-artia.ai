@@ -108,7 +108,7 @@ const Index = () => {
             
             <div className="text-center mt-12">
               <Link to="/how-it-works">
-                <Button variant="outline" className="font-tinos text-[#313e7f]">Learn More About Our Process</Button>
+                <Button variant="outline" className="font-tinos">Learn More About Our Process</Button>
               </Link>
             </div>
           </div>
@@ -118,7 +118,7 @@ const Index = () => {
         <section className="py-16 bg-secondary">
           <div className="content-container">
             <div className="text-center mb-12">
-              <h2 className="mb-4 font-tinos">Why Choose artia</h2>
+              <h2 className="mb-4 font-tinos">Why Choose artisanal</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-tinos">
                 Our platform offers a secure, intuitive experience for both buyers and artisan creators.
               </p>

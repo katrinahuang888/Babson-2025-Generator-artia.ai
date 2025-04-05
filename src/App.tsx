@@ -14,7 +14,6 @@ import SellerDashboard from "./pages/seller/Dashboard";
 import CreateRequest from "./pages/buyer/CreateRequest";
 import Explore from "./pages/Explore";
 import NotFound from "./pages/NotFound";
-import JoinUs from "./pages/JoinUs";
 
 const queryClient = new QueryClient();
 
@@ -35,7 +34,6 @@ const App = () => (
           <Route path="/create-request" element={<CreateRequest />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/join-artia" element={<JoinUs />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

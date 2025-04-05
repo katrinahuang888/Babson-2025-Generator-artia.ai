@@ -1,3 +1,4 @@
+
 import React, { ReactNode } from 'react';
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -13,7 +14,7 @@ const OnboardingLayout = ({ children, title, step, totalSteps }: OnboardingLayou
   const progress = (step / totalSteps) * 100;
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center py-12 px-4 bg-gradient-to-b from-background to-secondary/50" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>
+    <div className="min-h-screen flex flex-col justify-center items-center py-12 px-4 bg-gradient-to-b from-background to-secondary/50">
       <div className="w-full max-w-3xl animate-fade-in">
         <div className="mb-8 text-center">
           <h1 className="mb-2">{title}</h1>

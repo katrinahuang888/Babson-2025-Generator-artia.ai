@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import AuthForm from '@/components/auth/AuthForm';
@@ -15,8 +16,8 @@ const Register = () => {
       <main className="flex-grow flex items-center justify-center py-12 px-4 bg-gradient-to-b from-background to-secondary/50">
         <div className="w-full">
           <div className="mb-8 text-center">
-            <h1 className="text-3xl font-bold" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>Create Your Account</h1>
-            <p className="text-muted-foreground mt-2" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>
+            <h1 className="text-3xl font-bold">Create Your Account</h1>
+            <p className="text-muted-foreground mt-2">
               Join CreatorMarket to {userType === 'buyer' ? 'commission creative work' : 
                 userType === 'seller' ? 'sell your creative services' : 
                 'start buying or selling creative work'}

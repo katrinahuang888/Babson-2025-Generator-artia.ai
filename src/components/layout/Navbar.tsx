@@ -18,6 +18,9 @@ const Navbar = () => {
             <Link to="/explore" className="text-muted-foreground hover:text-foreground transition-colors text-[#313e7f] font-tinos">
               Explore Artisans
             </Link>
+            <Link to="/donate">
+            <Button className="hidden sm:inline-flex bg-[#313e7f] hover:bg-[#2b366f] text-white font-tinos">Donate Today</Button>
+          </Link>
           </nav>
         </div>
         

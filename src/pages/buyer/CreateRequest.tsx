@@ -229,9 +229,9 @@ const CreateRequest = () => {
     switch (currentStep) {
       case 1:
         return (
-          <div className="space-y-6 animate-fade-in">
+          <div className="space-y-6 animate-fade-in" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>
             <div className="space-y-2">
-              <Label htmlFor="title">Project Title</Label>
+              <Label htmlFor="title" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>Project Title</Label>
               <Input 
                 id="title" 
                 name="title" 
@@ -243,7 +243,7 @@ const CreateRequest = () => {
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="description">Project Description</Label>
+              <Label htmlFor="description" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>Project Description</Label>
               <Textarea 
                 id="description" 
                 name="description"
@@ -253,13 +253,13 @@ const CreateRequest = () => {
                 className="min-h-[180px]"
                 required
               />
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-muted-foreground" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>
                 Be specific about the materials, style, and purpose of the handcrafted item you're requesting.
               </p>
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="category">Craft Category</Label>
+              <Label htmlFor="category" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>Craft Category</Label>
               <Select 
                 value={formData.category} 
                 onValueChange={(value) => handleSelectChange('category', value)}
@@ -282,272 +282,7 @@ const CreateRequest = () => {
               </Select>
             </div>
           </div>
-        );
-      case 2:
-        return (
-          <div className="space-y-6 animate-fade-in">
-            <div className="space-y-2">
-              <Label>Budget Range</Label>
-              <div className="pt-6 px-2">
-                <Slider 
-                  defaultValue={[100]} 
-                  min={25} 
-                  max={500} 
-                  step={5} 
-                  onValueChange={handleSliderChange}
-                />
-              </div>
-              <div className="flex justify-between items-center mt-2">
-                <span className="text-sm text-muted-foreground">$25</span>
-                <span className="text-sm font-medium">${formData.budget[0]}</span>
-                <span className="text-sm text-muted-foreground">$500+</span>
-              </div>
-              <p className="text-xs text-muted-foreground mt-2">
-                This is an estimate. You can discuss the final price with the creator.
-              </p>
-            </div>
-            
-            <div className="space-y-2">
-              <Label>Timeframe</Label>
-              <RadioGroup 
-                value={formData.timeframe}
-                onValueChange={(value) => handleSelectChange('timeframe', value)}
-              >
-                <div className="flex items-start space-x-2 bg-background p-3 rounded-md border mb-2">
-                  <RadioGroupItem value="standard" id="timeframe-standard" />
-                  <div className="grid gap-1">
-                    <Label htmlFor="timeframe-standard" className="font-medium">Standard</Label>
-                    <p className="text-sm text-muted-foreground">
-                      1-2 weeks delivery time
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-2 bg-background p-3 rounded-md border mb-2">
-                  <RadioGroupItem value="expedited" id="timeframe-expedited" />
-                  <div className="grid gap-1">
-                    <Label htmlFor="timeframe-expedited" className="font-medium">Expedited</Label>
-                    <p className="text-sm text-muted-foreground">
-                      3-5 days delivery time, may increase price
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-2 bg-background p-3 rounded-md border">
-                  <RadioGroupItem value="flexible" id="timeframe-flexible" />
-                  <div className="grid gap-1">
-                    <Label htmlFor="timeframe-flexible" className="font-medium">Flexible</Label>
-                    <p className="text-sm text-muted-foreground">
-                      No rush, can discuss timeline with creator
-                    </p>
-                  </div>
-                </div>
-              </RadioGroup>
-            </div>
-          </div>
-        );
-      case 3:
-        return (
-          <div className="space-y-6 animate-fade-in">
-            <div className="space-y-2">
-              <Label>Reference Images</Label>
-              <p className="text-sm text-muted-foreground mb-4">
-                Upload images that can help the creator understand your vision.
-                <span className="block mt-1">
-                  <strong>Tip:</strong> We'll analyze these images to find creators who match your style preferences.
-                </span>
-              </p>
-              
-              <input 
-                type="file"
-                ref={fileInputRef}
-                onChange={handleFileUpload}
-                accept="image/*"
-                multiple
-                className="hidden"
-              />
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {formData.referenceUrls.map((url, index) => (
-                  <div 
-                    key={index}
-                    className="relative border rounded-lg overflow-hidden h-40"
-                  >
-                    <img 
-                      src={url} 
-                      alt={`Reference ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                    <Button
-                      variant="destructive"
-                      size="icon"
-                      className="absolute top-1 right-1 h-6 w-6"
-                      onClick={() => removeImage(index)}
-                    >
-                      <X className="h-3 w-3" />
-                    </Button>
-                  </div>
-                ))}
-                
-                {formData.referenceUrls.length < 4 && Array.from({ 
-                  length: Math.min(4 - formData.referenceUrls.length, 4) 
-                }).map((_, index) => (
-                  <div 
-                    key={`upload-${index}`}
-                    className="border-2 border-dashed rounded-lg p-6 text-center h-40 flex flex-col items-center justify-center cursor-pointer hover:bg-secondary/30"
-                    onClick={() => fileInputRef.current?.click()}
-                  >
-                    <UploadCloud className="h-8 w-8 text-muted-foreground" />
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      Click to upload
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs text-muted-foreground mt-2">
-                Supported formats: JPG, PNG, WebP (Max 5MB each)
-              </p>
-            </div>
-            
-            <div className="space-y-2 mt-8">
-              <Label htmlFor="additionalNotes">Additional Notes</Label>
-              <Textarea 
-                id="additionalNotes"
-                name="additionalNotes"
-                value={formData.additionalNotes}
-                onChange={handleInputChange}
-                placeholder="Anything else you'd like to tell the creator about your request?"
-                className="min-h-[100px]"
-              />
-            </div>
-          </div>
-        );
-      case 4:
-        return (
-          <div className="space-y-8 animate-fade-in">
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Recommended Creators</h3>
-              <p className="text-muted-foreground mb-6">
-                Based on your images and project details, we've matched you with these creators.
-                Select one or more to receive your project request.
-              </p>
-              
-              {matchedCreators.length > 0 ? (
-                <div className="space-y-6">
-                  <Carousel className="w-full">
-                    <CarouselContent>
-                      {matchedCreators.map((creator) => {
-                        const isSelected = formData.selectedCreators.includes(creator.id);
-                        
-                        return (
-                          <CarouselItem key={creator.id} className="md:basis-1/2 lg:basis-1/3">
-                            <div className="p-1">
-                              <Card 
-                                className={`overflow-hidden cursor-pointer transition-all ${
-                                  isSelected 
-                                    ? 'ring-2 ring-primary ring-offset-2' 
-                                    : 'hover:shadow-md'
-                                }`}
-                                onClick={() => toggleCreatorSelection(creator.id)}
-                              >
-                                <div className="grid grid-cols-2 gap-1 p-3">
-                                  {creator.portfolio.slice(0, 4).map((img, idx) => (
-                                    <div key={idx} className="aspect-square overflow-hidden rounded-sm">
-                                      <img 
-                                        src={img} 
-                                        alt={`${creator.name}'s work sample ${idx + 1}`}
-                                        className="object-cover w-full h-full"
-                                      />
-                                    </div>
-                                  ))}
-                                </div>
-                                
-                                <div className="p-4 pt-1">
-                                  <div className="flex items-center gap-3 mb-2">
-                                    <Avatar>
-                                      <AvatarImage src={creator.avatar} />
-                                      <AvatarFallback>{creator.name.charAt(0)}</AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                      <h4 className="font-medium">{creator.name}</h4>
-                                      <div className="flex items-center">
-                                        <span className="text-sm font-medium">{creator.rating}</span>
-                                        <span className="text-yellow-500 mx-1">★</span>
-                                        <span className="text-xs text-muted-foreground">
-                                          ({creator.reviewCount} reviews)
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  
-                                  <div className="flex flex-wrap gap-1 mb-3">
-                                    {creator.specialties.map((specialty, idx) => (
-                                      <Badge key={idx} variant="secondary" className="text-xs">
-                                        {specialty}
-                                      </Badge>
-                                    ))}
-                                  </div>
-                                  
-                                  {isSelected ? (
-                                    <Badge className="bg-primary text-primary-foreground">
-                                      Selected
-                                    </Badge>
-                                  ) : (
-                                    <Badge variant="outline">Click to select</Badge>
-                                  )}
-                                </div>
-                              </Card>
-                            </div>
-                          </CarouselItem>
-                        );
-                      })}
-                    </CarouselContent>
-                    <CarouselPrevious className="hidden sm:flex" />
-                    <CarouselNext className="hidden sm:flex" />
-                  </Carousel>
-                  
-                  <div className="bg-secondary/30 p-4 rounded-md">
-                    <h4 className="font-medium mb-2">
-                      Selected Creators: {formData.selectedCreators.length}
-                    </h4>
-                    {formData.selectedCreators.length > 0 ? (
-                      <div className="flex flex-wrap gap-2">
-                        {formData.selectedCreators.map(id => {
-                          const creator = matchedCreators.find(c => c.id === id);
-                          return creator ? (
-                            <Badge key={id} variant="secondary" className="pl-1">
-                              <Avatar className="h-5 w-5 mr-1">
-                                <AvatarImage src={creator.avatar} />
-                                <AvatarFallback>{creator.name.charAt(0)}</AvatarFallback>
-                              </Avatar>
-                              {creator.name}
-                              <button 
-                                className="ml-1 hover:text-destructive" 
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  toggleCreatorSelection(id);
-                                }}
-                              >
-                                ×
-                              </button>
-                            </Badge>
-                          ) : null;
-                        })}
-                      </div>
-                    ) : (
-                      <p className="text-sm text-muted-foreground">
-                        Please select at least one creator to receive your project request
-                      </p>
-                    )}
-                  </div>
-                </div>
-              ) : (
-                <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <Image className="h-12 w-12 text-muted-foreground mb-4" />
-                  <p>Finding creators who match your style...</p>
-                </div>
-              )}
-            </div>
-          </div>
-        );
+        ); 
       default:
         return null;
     }
@@ -559,11 +294,14 @@ const CreateRequest = () => {
         <div className="relative">
           <div className="overflow-hidden h-2 text-xs flex rounded bg-secondary">
             <div 
-              style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+              style={{ width: `${(currentStep / totalSteps) * 100}%`, backgroundColor: '#313e7f' }}
               className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-marketplace-terracotta"
             ></div>
           </div>
-          <div className="flex justify-between text-xs text-muted-foreground mt-2">
+          <div 
+            className="flex justify-between text-xs mt-2"
+            style={{ fontFamily: 'Tinos', color: '#313e7f' }}
+          >
             <span>Project Details</span>
             <span>Budget & Timeline</span>
             <span>Reference Images</span>
@@ -575,7 +313,7 @@ const CreateRequest = () => {
   };
   
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>
       <Navbar />
       
       <main className="flex-grow py-8 bg-gradient-to-b from-background to-marketplace-earth-light/30">

@@ -108,7 +108,7 @@ const Index = () => {
             
             <div className="text-center mt-12">
               <Link to="/how-it-works">
-                <Button variant="outline" className="font-tinos">Learn More About Our Process</Button>
+                <Button variant="outline" className="font-tinos text-[#313e7f]">Learn More About Our Process</Button>
               </Link>
             </div>
           </div>

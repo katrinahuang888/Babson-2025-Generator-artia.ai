@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -47,7 +46,7 @@ const AuthForm = ({ type }: AuthFormProps) => {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto">
+    <Card className="w-full max-w-md mx-auto" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>
       <CardHeader>
         <CardTitle>{type === 'login' ? 'Login' : 'Create an Account'}</CardTitle>
         <CardDescription>

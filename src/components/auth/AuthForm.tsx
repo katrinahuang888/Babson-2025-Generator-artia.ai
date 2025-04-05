@@ -46,7 +46,7 @@ const AuthForm = ({ type }: AuthFormProps) => {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto" style={{ fontFamily: 'Tinos', color: '#313e7f' }}>
+    <Card className="w-full max-w-md mx-auto font-tinos" style={{ color: '#313e7f' }}>
       <CardHeader>
         <CardTitle>{type === 'login' ? 'Login' : 'Create an Account'}</CardTitle>
         <CardDescription>

@@ -35,7 +35,7 @@ const App = () => (
           <Route path="/create-request" element={<CreateRequest />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/join-artia" element={<JoinUs />} />
+          <Route path="/join-us" element={<JoinUs />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

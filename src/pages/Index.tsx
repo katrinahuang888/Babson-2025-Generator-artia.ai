@@ -18,11 +18,10 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 text-center md:text-left animate-fade-in">
                 <h1 className="font-bold !leading-tight">
-                  Discover Authentic <span className="gradient-text">Artisan</span> Crafts
+                  Discover Authentic <span className="gradient-text">Artisan</span> Crafts Filled With Heritage
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Commission handcrafted treasures directly from skilled artisans or sell your artisanal creations on our marketplace.
-                </p>
+                  An AI-powered marketplace bridging global designers, architects, and creators with artisan communities worldwide. Combining smart tech, visual tools, and cultural heritage — making custom, story-rich design accessible, efficient, and ethical.                </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Link to="/register">
                     <Button size="lg" className="w-full sm:w-auto">
@@ -119,7 +118,7 @@ const Index = () => {
         <section className="py-16 bg-secondary">
           <div className="content-container">
             <div className="text-center mb-12">
-              <h2 className="mb-4">Why Choose ArtisanMarket</h2>
+              <h2 className="mb-4">Why Choose aRTiSANAL</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Our platform offers a secure, intuitive experience for both buyers and artisan creators.
               </p>
@@ -171,7 +170,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/register?type=buyer">
                 <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                  Join as a Buyer
+                  Join as a Design Consultant
                 </Button>
               </Link>
               <Link to="/register?type=seller">

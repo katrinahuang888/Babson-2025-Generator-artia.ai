@@ -27,10 +27,10 @@ const Navbar = () => {
             <Button variant="outline" className="hidden sm:inline-flex">Login</Button>
           </Link>
           <Link to="/register">
-            <Button className="hidden sm:inline-flex">Get Started</Button>
+            <Button className="hidden sm:inline-flex bg-marketplace-terracotta hover:bg-marketplace-terracotta-dark">Get Started</Button>
           </Link>
           <Link to="/login" className="sm:hidden">
-            <UserCircle className="h-6 w-6 text-marketplace-purple" />
+            <UserCircle className="h-6 w-6 text-marketplace-terracotta" />
           </Link>
         </div>
       </div>

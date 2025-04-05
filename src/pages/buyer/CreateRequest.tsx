@@ -29,13 +29,13 @@ const MOCK_CREATORS = [
     avatar: 'https://i.pravatar.cc/150?img=1',
     rating: 4.9,
     reviewCount: 124,
-    specialties: ['Digital Art', 'Character Design', 'Illustration'],
+    specialties: ['Pottery', 'Ceramic Tableware', 'Decorative Vessels'],
     portfolio: [
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe',
-      'https://images.unsplash.com/photo-1626544827763-d516dce335e2',
-      'https://images.unsplash.com/photo-1547891654-e66ed7ebb968'
+      'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261',
+      'https://images.unsplash.com/photo-1603813507806-0963f2583444',
+      'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61'
     ],
-    bio: 'Digital artist specializing in character design and illustration with over 8 years of experience.',
+    bio: 'Ceramic artisan specializing in functional pottery and decorative vessels with 8+ years of experience.',
     completedProjects: 89
   },
   {
@@ -44,13 +44,13 @@ const MOCK_CREATORS = [
     avatar: 'https://i.pravatar.cc/150?img=2',
     rating: 4.8,
     reviewCount: 97,
-    specialties: ['Logo Design', 'UI/UX Design', 'Branding'],
+    specialties: ['Weaving', 'Tapestry', 'Natural Dye Textiles'],
     portfolio: [
-      'https://images.unsplash.com/photo-1626785774573-4b799315345d',
-      'https://images.unsplash.com/photo-1561070791-2526d30994b5',
-      'https://images.unsplash.com/photo-1559028012-481c04fa702d'
+      'https://images.unsplash.com/photo-1584656197538-558e0e335324',
+      'https://images.unsplash.com/photo-1588187284031-3cea78e5dc76',
+      'https://images.unsplash.com/photo-1606722590583-6951b5ea92ad'
     ],
-    bio: 'Brand designer and identity expert. I help businesses stand out with compelling visual design.',
+    bio: 'Textile artisan specializing in handwoven goods using natural fibers and traditional techniques.',
     completedProjects: 67
   },
   {
@@ -59,13 +59,13 @@ const MOCK_CREATORS = [
     avatar: 'https://i.pravatar.cc/150?img=3',
     rating: 5.0,
     reviewCount: 45,
-    specialties: ['Animation', '3D Modeling', 'Motion Graphics'],
+    specialties: ['Woodworking', 'Furniture', 'Wood Carving'],
     portfolio: [
-      'https://images.unsplash.com/photo-1618556450994-a6a128ef0d9d',
-      'https://images.unsplash.com/photo-1618556658017-fd9c732d1360',
-      'https://images.unsplash.com/photo-1618556658113-565c7e3bc4dd'
+      'https://images.unsplash.com/photo-1544964571-b9514a50a356',
+      'https://images.unsplash.com/photo-1565538810643-b5bdb714032a',
+      'https://images.unsplash.com/photo-1575539665466-3cbd3feda337'
     ],
-    bio: 'Animator and motion designer bringing characters and stories to life through movement.',
+    bio: 'Master woodworker crafting heirloom-quality furniture and decorative pieces from sustainably sourced wood.',
     completedProjects: 42
   },
   {
@@ -74,13 +74,13 @@ const MOCK_CREATORS = [
     avatar: 'https://i.pravatar.cc/150?img=4',
     rating: 4.7,
     reviewCount: 88,
-    specialties: ['Illustration', 'Comic Art', 'Concept Design'],
+    specialties: ['Leather Crafting', 'Bags', 'Custom Accessories'],
     portfolio: [
-      'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3',
-      'https://images.unsplash.com/photo-1607799279861-4dd421887fb3',
-      'https://images.unsplash.com/photo-1600132806608-231446b2e7af'
+      'https://images.unsplash.com/photo-1621478374422-35206faedbd5',
+      'https://images.unsplash.com/photo-1585916795125-e864bdc93611',
+      'https://images.unsplash.com/photo-1564221710304-0b37c8b9d729'
     ],
-    bio: 'Illustrator with a passion for storytelling through detailed character illustrations and concept art.',
+    bio: 'Leather artisan creating timeless, functional pieces using traditional techniques and high-quality materials.',
     completedProjects: 56
   }
 ];
@@ -111,7 +111,7 @@ const CreateRequest = () => {
       setTimeout(() => {
         const detectedCategories = formData.category 
           ? [formData.category]
-          : ['Digital Art', 'Illustration', 'Character Design'];
+          : ['Pottery', 'Ceramic Tableware', 'Decorative Vessels'];
         resolve(detectedCategories);
       }, 1000);
     });
@@ -254,28 +254,30 @@ const CreateRequest = () => {
                 required
               />
               <p className="text-xs text-muted-foreground">
-                Be specific about the style, elements, and purpose of what you're requesting.
+                Be specific about the materials, style, and purpose of the handcrafted item you're requesting.
               </p>
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="category">Category</Label>
+              <Label htmlFor="category">Craft Category</Label>
               <Select 
                 value={formData.category} 
                 onValueChange={(value) => handleSelectChange('category', value)}
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Select category" />
+                  <SelectValue placeholder="Select craft category" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="digital-art">Digital Art</SelectItem>
-                  <SelectItem value="illustration">Illustration</SelectItem>
-                  <SelectItem value="logo-design">Logo Design</SelectItem>
-                  <SelectItem value="character-design">Character Design</SelectItem>
-                  <SelectItem value="animation">Animation</SelectItem>
-                  <SelectItem value="ui-design">UI/UX Design</SelectItem>
-                  <SelectItem value="graphic-design">Graphic Design</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
+                  <SelectItem value="pottery">Pottery & Ceramics</SelectItem>
+                  <SelectItem value="weaving">Weaving & Textile Arts</SelectItem>
+                  <SelectItem value="woodworking">Woodworking</SelectItem>
+                  <SelectItem value="leather">Leather Crafting</SelectItem>
+                  <SelectItem value="jewelry">Handcrafted Jewelry</SelectItem>
+                  <SelectItem value="glass">Glasswork</SelectItem>
+                  <SelectItem value="basket">Basket Weaving</SelectItem>
+                  <SelectItem value="metal">Metalwork</SelectItem>
+                  <SelectItem value="paper">Paper Crafts</SelectItem>
+                  <SelectItem value="other">Other Handcrafts</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -558,14 +560,14 @@ const CreateRequest = () => {
           <div className="overflow-hidden h-2 text-xs flex rounded bg-secondary">
             <div 
               style={{ width: `${(currentStep / totalSteps) * 100}%` }}
-              className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-marketplace-purple"
+              className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-marketplace-terracotta"
             ></div>
           </div>
           <div className="flex justify-between text-xs text-muted-foreground mt-2">
             <span>Project Details</span>
             <span>Budget & Timeline</span>
             <span>Reference Images</span>
-            <span>Select Creators</span>
+            <span>Select Artisans</span>
           </div>
         </div>
       </div>
@@ -576,7 +578,7 @@ const CreateRequest = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       
-      <main className="flex-grow py-8 bg-gradient-to-b from-background to-secondary/50">
+      <main className="flex-grow py-8 bg-gradient-to-b from-background to-marketplace-earth-light/30">
         <div className="content-container max-w-3xl">
           <div className="mb-6">
             <Button 
@@ -588,9 +590,9 @@ const CreateRequest = () => {
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back
             </Button>
-            <h1 className="text-3xl font-bold">Create a Project Request</h1>
+            <h1 className="text-3xl font-bold">Create a Craft Request</h1>
             <p className="text-muted-foreground">
-              Tell creators what you're looking for to get the best responses
+              Tell our artisans what you're looking for to get the best handcrafted pieces
             </p>
           </div>
           
@@ -612,6 +614,7 @@ const CreateRequest = () => {
               <Button 
                 onClick={handleNextStep}
                 disabled={currentStep === totalSteps && formData.selectedCreators.length === 0}
+                className="bg-marketplace-terracotta hover:bg-marketplace-terracotta-dark"
               >
                 {currentStep === totalSteps ? (
                   <>Submit Request</>

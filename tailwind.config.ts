@@ -63,17 +63,25 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for our marketplace
+				// Updated marketplace colors to pottery/earthy tones
 				marketplace: {
-					purple: {
-						light: '#9b87f5',
-						DEFAULT: '#8B5CF6',
-						dark: '#6E59A5',
+					// Replaced purple with terracotta/pottery colors
+					terracotta: {
+						light: '#d4a276', 
+						DEFAULT: '#b86f50',
+						dark: '#8b4513',
 					},
-					teal: {
-						DEFAULT: '#0EA5E9',
-						dark: '#0284c7',
+					// Replaced teal with earthy clay color
+					clay: {
+						DEFAULT: '#a67c52',
+						dark: '#7c5a3c',
 					},
+					// Additional earthy tones
+					earth: {
+						light: '#d2b48c', // tan
+						DEFAULT: '#8b735b', // medium brown
+						dark: '#5d4037', // dark brown
+					}
 				},
 			},
 			borderRadius: {

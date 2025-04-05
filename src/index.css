@@ -5,65 +5,65 @@
 
 @layer base {
   :root {
-    --background: 260 46% 98%;
-    --foreground: 260 10% 10%;
+    --background: 30 30% 98%;
+    --foreground: 20 10% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 260 10% 10%;
+    --card-foreground: 20 10% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 260 10% 10%;
+    --popover-foreground: 20 10% 10%;
 
-    --primary: 263 83% 66%;
+    --primary: 25 45% 52%; /* terracotta */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 260 30% 96%;
-    --secondary-foreground: 260 10% 10%;
+    --secondary: 30 30% 96%;
+    --secondary-foreground: 20 10% 10%;
 
-    --muted: 260 30% 96%;
-    --muted-foreground: 260 10% 40%;
+    --muted: 30 30% 96%;
+    --muted-foreground: 20 10% 40%;
 
-    --accent: 196 94% 48%;
+    --accent: 25 35% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 260 30% 92%;
-    --input: 260 30% 92%;
-    --ring: 260 83% 66%;
+    --border: 30 30% 92%;
+    --input: 30 30% 92%;
+    --ring: 25 45% 52%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 260 10% 10%;
-    --foreground: 260 10% 98%;
+    --background: 20 10% 10%;
+    --foreground: 30 10% 98%;
 
-    --card: 260 10% 15%;
-    --card-foreground: 260 10% 98%;
+    --card: 20 10% 15%;
+    --card-foreground: 30 10% 98%;
 
-    --popover: 260 10% 15%;
-    --popover-foreground: 260 10% 98%;
+    --popover: 20 10% 15%;
+    --popover-foreground: 30 10% 98%;
 
-    --primary: 263 83% 66%;
+    --primary: 25 45% 52%; /* terracotta */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 260 10% 20%;
-    --secondary-foreground: 260 10% 98%;
+    --secondary: 20 10% 20%;
+    --secondary-foreground: 30 10% 98%;
 
-    --muted: 260 10% 20%;
-    --muted-foreground: 260 10% 60%;
+    --muted: 20 10% 20%;
+    --muted-foreground: 30 10% 60%;
 
-    --accent: 196 94% 48%;
+    --accent: 25 35% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 260 10% 20%;
-    --input: 260 10% 20%;
-    --ring: 260 83% 66%;
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 25 45% 52%;
   }
 }
 
@@ -94,7 +94,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-marketplace-purple to-marketplace-teal bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-marketplace-terracotta to-marketplace-clay bg-clip-text text-transparent;
   }
 
   .content-container {
@@ -108,7 +108,7 @@
   }
 
   .step:before {
-    @apply absolute w-9 h-9 bg-marketplace-purple-light rounded-full font-medium text-center text-white inline-flex items-center justify-center -left-4 ring-4 ring-background;
+    @apply absolute w-9 h-9 bg-marketplace-terracotta-light rounded-full font-medium text-center text-white inline-flex items-center justify-center -left-4 ring-4 ring-background;
     content: counter(step);
   }
 }

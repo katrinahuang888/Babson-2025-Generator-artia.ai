@@ -159,28 +159,32 @@ const Index = () => {
         </section>
         
         {/* CTA Section */}
-        {/* CTA Section */}
-        <section className="py-16 bg-marketplace-purple text-black">
-          <div className="content-container text-center">
-            <h2 className="mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-              Join our artisan marketplace today and commission unique handcrafted items
-              or offer your artisanal skills to clients around the world.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/register?type=buyer">
-                <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                  Join as a Design Consultant
-                </Button>
-              </Link>
-              <Link to="/register?type=seller">
-                <Button size="lg" variant="outline" className="bg-transparent border-white hover:bg-white/10 w-full sm:w-auto">
-                  Join as an Artisan
-                </Button>
-              </Link>
+          <section className="py-16 bg-marketplace-purple text-black">
+            <div className="content-container text-center">
+              <h2 className="mb-4">Ready to Get Started?</h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                Join our artisan marketplace today and commission unique handcrafted items
+                or offer your artisanal skills to clients around the world.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/register?type=buyer">
+                  <Button size="lg" variant="secondary" className="w-full sm:w-auto">
+                    Join as a Design Consultant
+                  </Button>
+                </Link>
+                <Link to="/register?type=seller">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="bg-white text-black border-black hover:bg-gray-100 hover:text-gray-700 w-full sm:w-auto"
+                  >
+                    Join as an Artisan
+                  </Button>
+                </Link>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+
       </main>
       
       <Footer />

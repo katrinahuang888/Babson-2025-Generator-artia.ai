@@ -160,7 +160,8 @@ const Index = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-16 bg-marketplace-purple text-white">
+        {/* CTA Section */}
+        <section className="py-16 bg-marketplace-purple text-black">
           <div className="content-container text-center">
             <h2 className="mb-4">Ready to Get Started?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">

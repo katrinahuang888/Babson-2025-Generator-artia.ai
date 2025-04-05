@@ -134,7 +134,7 @@ const AuthForm = ({ type }: AuthFormProps) => {
           Don't have an account?{' '}
           <a 
             href="/register" 
-            className="text-marketplace-purple hover:underline"
+            className="font-tinos style={{ color: '#313e7f' }} text-marketplace-purple hover:underline"
             onClick={(e) => {
               e.preventDefault();
               navigate('/register');

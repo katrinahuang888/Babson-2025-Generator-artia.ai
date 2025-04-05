@@ -168,7 +168,7 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/register?type=buyer">
-                  <Button size="lg" variant="secondary" className="w-full sm:w-auto">
+                  <Button size="lg" variant="secondary" className="bg-white text-black border-black hover:bg-gray-100 hover:text-gray-700 w-full sm:w-auto>
                     Join as a Design Consultant
                   </Button>
                 </Link>
